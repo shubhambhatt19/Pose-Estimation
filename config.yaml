@@ -1,0 +1,29 @@
+img_height : 128
+img_width : 128
+input_dir : '/home/bhatt/shubham/LPN_Implementation'  
+json_file : '/home/bhatt/shubham/LPN_Implementation/annotations/person_keypoints_train2014.json'
+batch_size : 8
+
+MODEL:
+  name: LPN
+  PRETRAINED: ''
+  HEATMAP_SIZE:
+  - 48
+  - 64
+  SIGMA: 2
+  NUM_JOINTS: 34
+  TARGET_TYPE: 'gaussian'
+  EXTRA:
+    ATTENTION: 'GC'
+    FINAL_CONV_KERNEL: 1
+    DECONV_WITH_BIAS: false
+    NUM_DECONV_LAYERS: 2
+    NUM_DECONV_FILTERS:
+    - 256
+    - 256
+    NUM_DECONV_KERNELS:
+    - 4
+    - 4
+    NUM_LAYERS: 50
+  
+
